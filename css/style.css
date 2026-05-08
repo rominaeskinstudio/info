@@ -122,6 +122,22 @@ body {
 }
 .btn-primary:hover { background: #333; transform: translateY(-3px); }
 
+/* --- SOBRE MÍ --- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-highlight {
+  padding: 30px;
+  border-left: 3px solid var(--dark);
+  font-style: italic;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
 /* --- SERVICES CARDS --- */
 .services-grid {
   display: grid;
