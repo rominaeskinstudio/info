@@ -25,10 +25,15 @@ body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; o
 }
 
 .nav-container {
-  width: 100%; max-width: 1200px;
-  margin: 0 auto; padding: 0 5%;
-  display: flex; justify-content: space-between; align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
+
 
 .logo { 
   font-family: 'Playfair Display', serif;
