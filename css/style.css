@@ -77,31 +77,39 @@ body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; o
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* --- FOOTER CENTRALIZADO --- */
+/* --- FIX ALINEACIÓN FOOTER --- */
 footer {
-  padding: 60px 0; background: var(--light);
-  border-top: 1px solid #eee; text-align: center;
+    padding: 60px 0;
+    text-align: center;
+    background: #fff;
 }
 
 .footer-container {
-  display: flex; flex-direction: column;
-  align-items: center; gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto centra todo el contenido horizontalmente */
+    justify-content: center;
+    gap: 20px;
 }
 
-.footer-socials { display: flex; justify-content: center; gap: 30px; }
+.footer-socials {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin: 15px 0;
+}
 
 .footer-socials a {
-  color: var(--dark); font-size: 2rem;
-  transition: 0.3s; text-decoration: none;
-  display: flex; align-items: center;
+    color: #1a1a1a;
+    font-size: 1.8rem; /* Tamaño correcto para que se vea nítido */
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.footer-socials a:hover { transform: translateY(-5px); }
-.footer-socials a .fa-instagram:hover { color: #E1306C; }
-.footer-socials a .fa-whatsapp:hover { color: #25D366; }
-
-.footer-info { color: var(--gray-medium); font-size: 0.95rem; }
-.footer-copy { font-size: 0.8rem; opacity: 0.5; }
+.footer-socials a:hover {
+    transform: translateY(-3px);
+    color: #E1306C; /* Color Instagram */
+}
 
 /* --- WHATSAPP FLOTANTE --- */
 .whatsapp-float {
