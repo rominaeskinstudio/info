@@ -164,21 +164,17 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* --- MAPA CORREGIDO --- */
+/* --- MAPA --- */
 .map-wrapper {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+  height: 400px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  line-height: 0;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.map-wrapper iframe {
-  border: 0;
-  width: 100%;
-}
+.map-wrapper iframe { filter: grayscale(1); transition: 0.5s; }
+.map-wrapper iframe:hover { filter: grayscale(0); }
 
 /* --- FOOTER CENTRALIZADO --- */
 footer {
