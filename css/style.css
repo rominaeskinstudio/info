@@ -176,6 +176,26 @@ body {
 .map-wrapper iframe { filter: grayscale(1); transition: 0.5s; }
 .map-wrapper iframe:hover { filter: grayscale(0); }
 
+/* --- CTA SECTION (CORREGIDO) --- */
+.cta-section {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.cta-section h2 { font-size: 2.5rem; margin-bottom: 30px; }
+
+/* Estilo específico para el botón blanco sobre fondo negro */
+.cta-section .btn-primary {
+  background: white !important;
+  color: black !important;
+}
+
+.cta-section .btn-primary:hover {
+  background: var(--gray-light) !important;
+}
+
 /* --- FOOTER CENTRALIZADO --- */
 footer {
     padding: 60px 0;
