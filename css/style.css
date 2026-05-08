@@ -1,4 +1,4 @@
-/* --- VARIABLES Y BASES --- */
+/* --- VARIABLES --- */
 :root {
   --primary-gradient: linear-gradient(135deg, #2a2a2a 0%, #000000 100%);
   --dark: #1a1a1a;
@@ -9,114 +9,92 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--dark);
-  line-height: 1.7;
-  overflow-x: hidden;
-}
+body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; }
 
-h1, h2, h3 { font-family: 'Playfair Display', serif; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
-.section { padding: 80px 0; }
-.section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
-.bg-light { background: var(--gray-light); }
-
-/* --- NAVBAR MEJORADA --- */
+/* --- NAVBAR ESTABLE --- */
 .navbar {
   position: fixed;
   top: 0; width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.nav-container { display: flex; align-items: center; justify-content: space-between; }
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .logo { 
+  font-family: 'Playfair Display', serif;
   font-size: 1.4rem; font-weight: 700;
   background: var(--primary-gradient);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 
-/* Botón menú móvil */
+/* BOTÓN HAMBURGUESA: Oculto en PC */
 .mobile-menu-btn {
   display: none;
-  background: none; border: none; font-size: 1.5rem; cursor: pointer;
+  background: none; border: none;
+  font-size: 1.5rem; cursor: pointer;
+  padding: 5px;
+  color: var(--dark);
 }
 
+.nav-links { display: flex; align-items: center; }
 .nav-links a {
-  margin: 0 1rem; text-decoration: none; color: var(--dark);
-  font-weight: 500; transition: 0.3s;
+  margin: 0 15px; text-decoration: none;
+  color: var(--dark); font-weight: 500; transition: 0.3s;
 }
-.nav-links a:hover { color: var(--gray-medium); }
 
-/* --- WHATSAPP FLOTANTE --- */
+.nav-actions { display: flex; align-items: center; gap: 15px; }
+
+.btn-whatsapp {
+  background: #000; color: #fff !important;
+  padding: 8px 20px; border-radius: 50px;
+  text-decoration: none; font-size: 0.9rem;
+  display: flex; align-items: center; gap: 8px;
+}
+
+/* WHATSAPP FLOTANTE */
 .whatsapp-float {
   position: fixed; bottom: 20px; right: 20px;
-  background-color: #25d366; color: white;
-  width: 60px; height: 60px; border-radius: 50px;
+  background: #25d366; color: #fff;
+  width: 60px; height: 60px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.2);
-  z-index: 1001; transition: 0.3s;
-}
-.whatsapp-float:hover { transform: scale(1.1); }
-
-/* --- HERO --- */
-.hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.5)), url('../images/hero.jpg') center/cover;
-  display: flex; align-items: center; justify-content: center; text-align: center; color: white;
-}
-.hero-content h1 { font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1.2; margin-bottom: 15px; }
-
-/* --- CARDS --- */
-.services-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;
-}
-.card {
-  background: white; border-radius: 15px; overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s;
-}
-.card:hover { transform: translateY(-5px); }
-.card img { width: 100%; height: 250px; object-fit: cover; }
-.card-body { padding: 1.5rem; }
-.price { color: var(--dark); font-weight: 700; display: block; margin-top: 10px; }
-
-/* --- RESULTADOS --- */
-.gallery-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;
-}
-.gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; }
-
-/* --- MAPA --- */
-.map-wrapper { height: 350px; border-radius: 15px; overflow: hidden; }
-
-/* --- CTA SECTION --- */
-.cta-section { background: var(--dark); color: white; text-align: center; padding: 80px 20px; }
-.cta-section .btn-primary { background: white !important; color: black !important; }
-
-.btn-primary {
-  padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;
-  transition: 0.3s; background: var(--primary-gradient); color: white !important;
+  font-size: 30px; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* --- RESPONSIVE --- */
+/* --- MEDIA QUERY: MÓVIL (CORRECCIONES DE LA FOTO) --- */
 @media (max-width: 768px) {
-  .mobile-menu-btn { display: block; }
+  .mobile-menu-btn { display: block; order: 3; } /* Aparece y se va a la derecha */
+  
   .nav-links {
-    display: none; position: absolute; top: 100%; left: 0; width: 100%;
-    background: white; padding: 20px; flex-direction: column; text-align: center;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+    display: none; /* Oculto hasta que JS añada .active */
+    position: absolute;
+    top: 70px; left: 0; width: 100%;
+    background: #fff; flex-direction: column;
+    padding: 20px 0; border-bottom: 2px solid var(--gray-light);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
   }
+
   .nav-links.active { display: flex; }
-  .nav-links a { margin: 15px 0; }
-  .nav-actions span { display: none; } /* Oculta texto "Reservar" */
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-grid { display: block; text-align: center; }
-  .about-highlight { margin-top: 20px; border-left: none; border-top: 3px solid var(--dark); padding: 20px; }
+  .nav-links a { padding: 10px; margin: 0; width: 100%; text-align: center; }
+
+  .nav-actions { order: 2; }
+  .btn-whatsapp span { display: none; } /* Solo queda el icono en la barra */
+  .btn-whatsapp { padding: 10px; }
+  
+  .logo { font-size: 1.1rem; order: 1; }
 }
