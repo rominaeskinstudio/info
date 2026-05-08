@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romina Skin Studio • Piel & Cosmiatría</title>
+    
     <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -14,7 +19,7 @@
         <div class="nav-container">
             <h2 class="logo">Romina Skin Studio</h2>
             
-            <button class="mobile-menu-btn" id="menu-open">
+            <button class="mobile-menu-btn" id="menu-open" aria-label="Abrir menú">
                 <i class="fas fa-bars"></i>
             </button>
 
@@ -26,10 +31,10 @@
             </div>
 
             <div class="nav-actions">
-                <a href="https://www.instagram.com/romina.skinstudio/" target="_blank" class="nav-social">
+                <a href="https://www.instagram.com/romina.skinstudio/" target="_blank" class="nav-social" rel="noopener">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://wa.me/5491124740812" class="btn-whatsapp" target="_blank">
+                <a href="https://wa.me/5491124740812" class="btn-whatsapp" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i> <span>Reservar</span>
                 </a>
             </div>
@@ -64,7 +69,7 @@
             <h2 class="section-title">Tratamientos</h2>
             <div class="services-grid">
                 <div class="card">
-                    <img src="images/limpieza.jpg" alt="Higiene Facial">
+                    <img src="images/limpieza.jpg" alt="Higiene Facial Detox">
                     <div class="card-body">
                         <h3>Higiene Facial Detox</h3>
                         <p>Análisis de piel + extracción + hidratación profunda.</p>
@@ -72,7 +77,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/peeling.jpg" alt="Peeling">
+                    <img src="images/peeling.jpg" alt="Peeling Personalizado">
                     <div class="card-body">
                         <h3>Peeling Personalizado</h3>
                         <p>Renovación celular para manchas, acné y líneas de expresión.</p>
@@ -80,7 +85,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/antiage.jpg" alt="Antiage">
+                    <img src="images/antiage.jpg" alt="Radiofrecuencia & Lifting">
                     <div class="card-body">
                         <h3>Radiofrecuencia & Lifting</h3>
                         <p>Tratamiento tensor para recuperar la firmeza y vitalidad.</p>
@@ -96,7 +101,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/glow.jpg" alt="Meso Glow">
+                    <img src="images/glow.jpg" alt="Skin Meso Glow">
                     <div class="card-body">
                         <h3>Skin Meso Glow</h3>
                         <p>Vitamina C y activos para un efecto satinado irresistible.</p>
@@ -104,7 +109,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/dermope.jpg" alt="Espalda">
+                    <img src="images/dermope.jpg" alt="Purificación de Espalda">
                     <div class="card-body">
                         <h3>Purificación de Espalda</h3>
                         <p>Limpieza profunda para tratar impurezas y foliculitis.</p>
@@ -132,9 +137,19 @@
     <section id="contacto" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Ubicación</h2>
-            <p style="text-align: center; color: var(--gray-medium); margin-bottom: 20px;">📍 Tucumán 983, CABA</p>
+            <div class="contact-info-top">
+                <p>📍 Tucumán 983, CABA</p>
+            </div>
             <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3284.01671327684!2d-58.3831835!3d-34.6037389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc46903f05%3A0x6283733005a76e75!2sTucum%C3%A1n%20983%2C%20C1049AAS%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1714567890123!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3283.990807851351!2d-58.3831!3d-34.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc37095971%3A0x66977884ee9db104!2zVHVjdW3DoW4gOTgzLCBDMTA0OUFBUyBDQUJB!5e0!3m2!1ses-419!2sar!4v1715000000000!5m2!1ses-419!2sar" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
@@ -151,10 +166,10 @@
             <p class="footer-brand"><strong>Romina Skin Studio</strong> • Piel & Cosmiatría</p>
             
             <div class="footer-socials">
-                <a href="https://www.instagram.com/romina.skinstudio/" target="_blank" title="Instagram">
+                <a href="https://www.instagram.com/romina.skinstudio/" target="_blank" title="Instagram" rel="noopener">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://wa.me/5491124740812" target="_blank" title="WhatsApp">
+                <a href="https://wa.me/5491124740812" target="_blank" title="WhatsApp" rel="noopener">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
